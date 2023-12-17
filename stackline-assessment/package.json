@@ -15,7 +15,12 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
+    "datatables": "^1.10.18",
     "highcharts": "^11.2.0",
+    "highcharts-react-official": "^3.2.1",
+    "install": "^0.13.0",
+    "jquery": "^3.7.1",
+    "npm": "^10.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.1"

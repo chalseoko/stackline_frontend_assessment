@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 // import productReducer from "../features/counter/counterSlice"
+
+// const data = require('./../data/stackline_frontend_assessment_data_2021.json');
 
 export const store = configureStore({
   reducer: {
-    // counter: counterReducer,
+    // productData: productReducer,
   },
 })
 
@@ -15,3 +17,9 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >
+
+// function productReducer(state = data , action) {
+//   switch (action.type) {
+//     // some code here.. 
+//   }
+// }

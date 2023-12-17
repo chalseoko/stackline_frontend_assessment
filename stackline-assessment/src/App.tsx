@@ -1,8 +1,63 @@
-import logo from "./logo.svg"
-// import { productCard } from "./features/product/ProductCard"
-import "./App.css"
+import logo from "./img/logo.svg"
+import "./css/App.css"
+import Highcharts from 'highcharts/highstock';
+import HighchartsReact from 'highcharts-react-official';
+
+const options = {
+  chart: {
+    type: 'spline'
+  },
+  title: {
+    text: 'Retail Sales',
+    align: 'low',
+    style: {
+      fontWeight: 'lighter',
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  series: [ {
+    data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  }],
+  xAxis: [
+    {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      acessibility: 'Months of the year',
+      title: {
+        enabled: false
+      }
+    }
+  ], 
+  yAxis: [
+    {
+      title : "",
+      labels: {
+        enabled:false
+      }
+    }
+  ],
+  plotOptions: {
+    series: {
+      point: {
+        events: {
+        }
+      }
+    }
+  },
+  credits: {
+    enabled: false
+  }
+};
 
 function App() {
+  Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'sans-serif'
+        }
+    }
+  });
 
   return (
     <div className="stackline-app">
@@ -17,12 +72,16 @@ function App() {
         </div>
         
         <div className="sale-column">
-          <div>Chart</div>
-          <div>Table</div>
+              <HighchartsReact
+                highcharts={Highcharts}
+                options={options}/>
+          {/* <div>Table</div> */}
         </div>
       </div>
     </div>
   )
+
+  
 }
 
 export default App
