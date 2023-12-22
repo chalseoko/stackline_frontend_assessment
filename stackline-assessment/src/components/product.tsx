@@ -1,9 +1,10 @@
+import { Fragment } from "react";
 import SalesTrend from "./sales-trend";
 import { Summary } from "./summary";
 
 export function Product() {
     return (
-        <div className='product-container'>
+        <Fragment>
             <div className='product-column'>
                 <Summary />
             </div>
@@ -11,6 +12,6 @@ export function Product() {
                 <SalesTrend />
                 {/* <SalesTable /> */}
             </div>
-        </div>
+        </Fragment>
     )
 }

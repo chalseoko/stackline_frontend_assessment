@@ -1,4 +1,4 @@
-import { fetchProductData, getFetchSuccess, getFetchtError } from "./productSlice";
+import { fetchProductData, getFetchSuccess, getFetchError } from "./productSlice";
 const jsonFilePath = "./../../data/stackline_product_data.json";
 
 // This is the implementation of the JSON API
@@ -12,7 +12,7 @@ export const fetchData = () => {
 
       dispatch(getFetchSuccess(data));
     } catch (error) {
-      dispatch(getFetchtError((error as Error).message));
+      dispatch(getFetchError((error as Error).message));
     }
   };
 };

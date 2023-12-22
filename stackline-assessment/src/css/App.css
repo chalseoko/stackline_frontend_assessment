@@ -1,45 +1,72 @@
-.logo {
-  height: 50%;
-  top: 50%;
-
-  position: absolute;
-  transform: translateY(-50%); 
-  vertical-align: text-bottom;
-}
-
-.product-image {
-  height: 20vh;
-  width: 20vh;
-}
-
-.stackline-app {
-  background-color: #f6f8fa;
-  width: 100%;
-  height: 150vh;
-}
-
 .banner {
   background-color: #062849;
   position: relative;
-  height: 5vmin;
+  height: 5vh;
+  margin-bottom: 5vh;
+}
+
+.logo {
+  position: absolute;
+  height: 50%;
+  transform: translateY(50%); 
+  padding: 0vh 5vh;
+}
+
+.stackline-app {
+  display: flexbox;
+}
+
+.product-image {
+  height: 25vh;
 }
 
 .product-container {
-  margin-top: 5vmin;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  gap: 5vh;
   text-align: center;
+  height: 75%;
+  padding: 0vh 5vh;
 }
  
-.product-column {
+.product-container div {
   background-color: #ffffff;
+}
+
+.product-column {
   width: 30%;
-  height: 75vh;
+  padding: 5px;
+}
+
+.tag-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag {
+  font-size: x-small;
+  border: rgb(6,40,73, 0.2) 2px solid;
+  padding: 5px 10px;
+  border-radius: 2px;
+  margin: 2px;
 }
 
 .sales-column {
-  background-color: #ffffff;
-  width: 60%;
-  height: 125vh;
+  width: 65%;
+  padding: 10px;
 }
+
+.title-text p:first-of-type {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.title-text p:last-of-type {
+  font-size: small;
+  opacity: calc(50%);
+}
+
+hr {
+  opacity: calc(25%);
+}
+

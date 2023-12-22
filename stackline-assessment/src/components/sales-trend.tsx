@@ -4,25 +4,28 @@ import { xTickLabels } from '../data/constants';
 
 const SalesTrend = (props: any) => {
     const sales = getMonthlySales();
-    if (sales) {
-        return (
-            <HighchartsReact
-                highcharts={Highcharts}
-                options={getTrendOptions.bind(sales)} />
-        );
-    } else {
-        return <div>Sales trend chart loading...</div>
-    }
+    return (
+        <HighchartsReact
+            highcharts={Highcharts}
+            options={getTrendOptions()} />
+    );
 }
 
-function getMonthlySales(): number[] {
-    return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+function getMonthlySales() {
+    return (
+    [
+        { "name": "1", data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+        { "name": "2", data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] }
+    ]);
 }
 
-function getTrendOptions(sales: number[]) {
+function getTrendOptions(): {} {
     return {
         chart: {
             type: 'spline',
+            style: {
+                fontFamily: ["Trebuchet MS", "sans-serif"]
+            }
 
         },
         credits: {
@@ -38,15 +41,25 @@ function getTrendOptions(sales: number[]) {
         legend: {
             enabled: false
         },
-        series: [{
-            data: sales
-        }],
+        series: [
+            { name: "Retail", data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], color: "#9da7c0" },
+            { name: "Wholesale", data: [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], color: "#45a7f6" },
+        ]
+        ,
         xAxis: [
             {
                 categories: xTickLabels,
                 acessibility: 'Months of the year',
                 title: {
                     enabled: false
+                },
+                lineColor: {
+                    opacity: 0.25
+                },
+                labels: {
+                    style: {
+                        opacity: 0.5
+                    }
                 }
             }
         ],
@@ -60,9 +73,8 @@ function getTrendOptions(sales: number[]) {
         ],
         plotOptions: {
             series: {
-                point: {
-                    events: {
-                    }
+                marker: {
+                    enabled: false
                 }
             }
         }
