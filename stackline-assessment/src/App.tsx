@@ -1,35 +1,29 @@
-import Highcharts from 'highcharts/highstock';
-import HighchartsReact from 'highcharts-react-official';
-import "./App.css";
-import logo from './logo.svg';
-import { trendOptions } from './constants';
+import "./css/App.css";
+import SalesTrend from "./components/sales-trend";
+import { Product } from "./components/product";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "./app/hooks";
+import { fetchProductData } from "./features/fetchProduct/productSlice";
+import { Banner } from "./components/banner";
 
-function App() {
-  return (
-    <div className="stackline-app">
-      <div className="banner">
-        <header>
-          <img src={logo} className="logo" alt="Stackline company logo" />
-        </header>
-      </div>
-      <div className="product-container">
-        <div className="product-column">
-          <div>Card</div>
-        </div>
-        
-        <div className="sale-column">
-              <HighchartsReact
-                highcharts={Highcharts}
-                options={trendOptions}/>
-              {/* <HighchartsReact
-                highcharts={Highcharts}
-                options={salesOptions}/> */}
-        </div>
-      </div>
-    </div>
-  )
+function App()  {
+  const dispatch = useAppDispatch();
+  const data = useAppSelector((state) => state.data);
+  const loading = useAppSelector((state) => state.loading);
+  const error = useAppSelector((state) => state.error);
 
+  useEffect(() => {
+      dispatch(fetchProductData());
+  }, []);
+
+  console.log(data, loading, error);
   
+    return (
+      <div className='stackline-app'>
+        <Banner />
+        <Product/>
+      </div>
+    );
 }
 
-export default App
+export default App;
