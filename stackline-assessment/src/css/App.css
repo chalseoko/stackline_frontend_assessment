@@ -8,7 +8,7 @@
 .logo {
   position: absolute;
   height: 50%;
-  transform: translateY(50%); 
+  transform: translateY(50%);
   padding: 0vh 5vh;
 }
 
@@ -17,6 +17,7 @@
 }
 
 .product-image {
+  height: 25vh;
 }
 
 .product-container {
@@ -26,7 +27,7 @@
   height: 75%;
   padding: 0vh 5vh;
 }
- 
+
 .product-container div {
   background-color: #ffffff;
 }
@@ -36,18 +37,24 @@
   padding: 5px;
 }
 
+.product {
+  margin: 3em;
+}
+
 .tag-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  margin: 0em 3em;
 }
 
 .tag {
-  font-size: x-small;
-  border: rgb(6,40,73, 0.2) 2px solid;
-  padding: 5px 10px;
+  border: rgb(6, 40, 73, 0.2) 2px solid;
+  padding: 5px 15px;
   border-radius: 2px;
-  margin: 2px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: small;
 }
 
 .sales-column {
@@ -56,16 +63,15 @@
 }
 
 .title-text p:first-of-type {
-  font-size: medium;
+  font-size: large;
   font-weight: bold;
 }
 
 .title-text p:last-of-type {
-  font-size: small;
+  font-size: medium;
   opacity: calc(50%);
 }
 
 hr {
   opacity: calc(25%);
 }
-

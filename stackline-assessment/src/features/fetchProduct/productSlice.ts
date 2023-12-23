@@ -1,37 +1,37 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit"
 
 interface ProductState {
-  data: any,
-  error: any,
-  loading: boolean,
+  data: any
+  error: any
+  loading: boolean
 }
 
 const initialState = {
   data: [],
   error: null,
   loading: false,
-} as ProductState;
+} as ProductState
 
 // Slice
 const productSlice = createSlice({
-  name: 'product',
+  name: "product",
   initialState: initialState,
   reducers: {
     fetchProductData: (state) => {
-      state.loading = true;
-      state.error = null;
+      state.loading = true
+      state.error = null
     },
     getFetchSuccess: (state, action) => {
-      state.loading = false;
-      state.data = action.payload;
+      state.loading = false
+      state.data = action.payload
     },
     getFetchError: (state, action) => {
-      state.loading = false;
-      state.error = action.payload;
+      state.loading = false
+      state.error = action.payload
     },
   },
-});
+})
 
-export const { fetchProductData, getFetchSuccess, getFetchError } = productSlice.actions;
-export default productSlice.reducer;
-
+export const { fetchProductData, getFetchSuccess, getFetchError } =
+  productSlice.actions
+export default productSlice.reducer

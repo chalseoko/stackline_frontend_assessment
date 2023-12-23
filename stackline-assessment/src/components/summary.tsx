@@ -1,18 +1,25 @@
-import Tags  from './tag';
+import { Fragment } from "react"
+import Tags from "./tag"
 
 function Summary(props: any) {
   return (
-    <div>
-      <div className="title-text">
-        <p>{props.item.title}</p>
-        <p>{props.item.subtitle}</p>
+    <Fragment>
+      <div className="product">
+        <img
+          src={props.item.image}
+          className="product-image"
+          alt="Magic Bullet Blender/Mixer"
+        />
+        <div className="title-text">
+          <p>{props.item.title}</p>
+          <p>{props.item.subtitle}</p>
+        </div>
       </div>
-      <img src={props.item.image} className="product-image" alt="Magic Bullet Blender/Mixer" />
       <div className="product-tags">
-        <Tags text={props.item.tags}/>
+        <Tags text={props.item.tags} />
       </div>
-    </div>
+    </Fragment>
   )
 }
 
-export default Summary;
+export default Summary
