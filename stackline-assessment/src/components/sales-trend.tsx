@@ -2,24 +2,30 @@ import Highcharts from 'highcharts/highstock';
 import HighchartsReact from "highcharts-react-official"
 import { xTickLabels } from '../data/constants';
 
-const SalesTrend = (props: any) => {
-    const sales = getMonthlySales();
+function SalesTrend (props: any) {
+    const sales =  props.sales ? getMonthlySales(props.sales) : []
     return (
         <HighchartsReact
             highcharts={Highcharts}
-            options={getTrendOptions()} />
+            options={getTrendOptions(sales)} />
     );
 }
 
-function getMonthlySales() {
-    return (
-    [
-        { "name": "1", data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
-        { "name": "2", data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] }
-    ]);
+function getMonthlySales(sales) {
+    let retailSales = Array.apply(null, Array(12)).map(Number.prototype.valueOf,0);
+    let wholesaleSales = Array.apply(null, Array(12)).map(Number.prototype.valueOf,0);
+
+    sales.forEach((salesWeek  => {
+        var month: number = salesWeek['weekEnding'].split('-')[1]
+        retailSales[month-1] += salesWeek['retailSales']
+        wholesaleSales[month-1] += salesWeek['wholesaleSales']
+    }));
+
+    return ({retail: retailSales,
+            wholesale: wholesaleSales})
 }
 
-function getTrendOptions(): {} {
+function getTrendOptions(sales: any): {} {
     return {
         chart: {
             type: 'spline',
@@ -42,8 +48,8 @@ function getTrendOptions(): {} {
             enabled: false
         },
         series: [
-            { name: "Retail", data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], color: "#9da7c0" },
-            { name: "Wholesale", data: [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], color: "#45a7f6" },
+            { name: "Wholesale Sales", data: sales.wholesale , color: "#9da7c0" },
+            { name: "Retail Sales", data: sales.retail, color: "#45a7f6" },
         ]
         ,
         xAxis: [

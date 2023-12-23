@@ -1,10 +1,9 @@
 import "./css/App.css";
-import SalesTrend from "./components/sales-trend";
-import { Product } from "./components/product";
+import Product from "./components/product";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
-import { fetchProductData } from "./features/fetchProduct/productSlice";
-import { Banner } from "./components/banner";
+import Banner from "./components/banner";
+import { fetchData } from "./features/fetchProduct/fetchProduct";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -13,16 +12,14 @@ function App() {
   const error = useAppSelector((state) => state.error);
 
   useEffect(() => {
-    dispatch(fetchProductData());
+    dispatch(fetchData());
   }, []);
-
-  console.log(data, loading, error);
 
   return (
     <div className='stackline-app'>
       <Banner />
       <div className='product-container'>
-        <Product />
+        {!error && <Product data={data} />}
       </div>
     </div>
   );

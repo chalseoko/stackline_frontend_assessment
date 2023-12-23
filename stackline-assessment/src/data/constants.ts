@@ -8,7 +8,7 @@ export interface WeeklySales {
     retailerMargin: number;
 }
 
-export interface Product {
+export interface Item {
     title: string;
     img: string;
     subtitle: string;

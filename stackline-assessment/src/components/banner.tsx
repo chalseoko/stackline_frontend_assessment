@@ -1,6 +1,6 @@
 import logo from './../images/logo.svg';
 
-export function Banner() {
+function Banner() {
     return (
         <div className="banner">
             <header>
@@ -9,3 +9,5 @@ export function Banner() {
         </div>
     )
 }
+
+export default Banner;

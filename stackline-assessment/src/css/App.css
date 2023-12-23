@@ -17,7 +17,6 @@
 }
 
 .product-image {
-  height: 25vh;
 }
 
 .product-container {
@@ -40,7 +39,7 @@
 .tag-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 .tag {

@@ -1,17 +1,18 @@
-import thumbnail from './../images/thumbnail.png';
-import { Tags } from './tag';
+import Tags  from './tag';
 
-export function Summary() {
+function Summary(props: any) {
   return (
     <div>
       <div className="title-text">
-        <p>Product Name</p>
-        <p>Subtitle text that is about a sentence long.</p>
+        <p>{props.item.title}</p>
+        <p>{props.item.subtitle}</p>
       </div>
-      <img src={thumbnail} className="product-image" alt="" />
+      <img src={props.item.image} className="product-image" alt="Magic Bullet Blender/Mixer" />
       <div className="product-tags">
-        <Tags/>
+        <Tags text={props.item.tags}/>
       </div>
     </div>
   )
 }
+
+export default Summary;

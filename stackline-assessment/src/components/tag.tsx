@@ -1,22 +1,17 @@
 import { Fragment } from "react";
 
-export function Tags() {
-    const tags: string[] = ["SampleTag", "AnotherTag", "TinyTag", "VerryyyyLongTag",]
+function Tags(props: any) {
 
     return (
         <Fragment>
             <hr />
             <div className="tag-items">
-                {tags.map((tag, index) => {
-                    return (
-                        <div key={index}>
-                            <p className="tag">{tag}</p>
-                        </div>
-                    );
-                })}
+                {props.text && props.text.map((item, index) => <span key={index} className="tag">{item}</span>)}
             </div>
             <hr />
         </Fragment>
     )
 }
+
+export default Tags;
 
