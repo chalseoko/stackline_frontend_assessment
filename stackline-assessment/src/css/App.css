@@ -47,7 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  margin: 0em 20px;
+  margin: 0px 20px;
 }
 
 .tag {
@@ -83,7 +83,7 @@ hr {
 }
 
 
-@media (max-width: 800px){
+@media (max-width: 600px){
   .product-container{
     flex-direction: column;
   }
