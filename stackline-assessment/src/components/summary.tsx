@@ -6,7 +6,7 @@ function Summary(props: any) {
     <Fragment>
       <div className="product">
         <img
-          src={props.item.image}
+          src={props.item.img}
           className="product-image"
           alt="Magic Bullet Blender/Mixer"
         />

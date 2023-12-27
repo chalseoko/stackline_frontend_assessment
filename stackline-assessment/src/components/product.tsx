@@ -14,7 +14,6 @@ function Product(props: any) {
       </div>
       <div className="sales-column">
         <SalesTrend sales={sales} />
-        {/* <SalesTable /> */}
       </div>
     </Fragment>
   )
