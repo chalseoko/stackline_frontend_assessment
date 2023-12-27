@@ -1,45 +1,23 @@
-# Stackline Frontend Assessment
+# stackline_frontend_assessment
 
-This project is my submission for the Frontend Engineer II position with Stackline. For this application, I have utilized React/Redux for the view and state management. It uses [Vite](https://vitejs.dev/) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/).
+Thank you for taking our web developer assessment. To complete the assessment, you will take what is 
+provided and create a simple product web page that uses React to produce the view and Redux to 
+manage the state. It should take approximately 2 hours to complete a typical solution, but you may take 
+up to 24 hours. You may use any public npm packages.
+Resources to get started (attached via email):
 
-## Run project
-1. Clone the repository to your local machine or via Github Codespaces.
-2. Navigate to the project directory:
-       ```cd stackline-assessment
-       ```
-3. Install all dependencies with: 
-       ```npm install
-       ```
-4. Run project with:
-        ```npm start```
-5. Open your browser and go to: [http://localhost:3000](http://localhost:3000)
+1. A JSON file to be used as the data source to populate the web page
+2. A wire mockup of what your final web page should look like. You only need to implement the 
+page with the graph and/or table.
+3. SVG of the Stackline logo
 
-## Folder Structure
-- **src**: Source code for the application
-- **build**: Static assets for production build
-
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
-```
-
-## Scripts
-
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
-
-## Technologies Used
-- React
-- Redux
-- TypeScript
-- HTML
-- CSS
-- [HighCharts](https://www.highcharts.com/)
-
-## Thank you
-Thanks for taking the time to review my code in consideration for this position and I look forward to hearing your feedback!
-
-
-
-
+We are looking for:
+1. A solution that resembles the provided mockup closely and implements AT LEAST ONE of either 
+the graph or table as seen in the mockup
+2. A working solution that takes the provided JSON file as output from a mock API call
+3. A solution that implements React and Redux best practices and patterns
+4. Clean, easy to follow code
+Nice to haves:  Typescript  Functional components  Additional functionality in the graph or table, e.g. sorting, overlays
+Assets to be returned via email within the provided time frame:
+1. A public git repository to view the final code
+2. A public URL to view the web page --- can be hosted on GitHub Pages, AWS, Vercel, etc.
