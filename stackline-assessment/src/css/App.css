@@ -82,13 +82,13 @@ hr {
   opacity: calc(25%);
 }
 
-
-@media (max-width: 600px){
-  .product-container{
+@media (max-width: 600px) {
+  .product-container {
     flex-direction: column;
   }
 
-  .product-column, .sales-column {
+  .product-column,
+  .sales-column {
     width: 100%;
   }
 }

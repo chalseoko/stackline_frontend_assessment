@@ -1,0 +1,31 @@
+{
+  "_vendor-0f593a83.js": {
+    "file": "assets/vendor-0f593a83.js"
+  },
+  "index.css": {
+    "file": "assets/index-a548c207.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "assets": [
+      "assets/logo-ee42717c.svg"
+    ],
+    "css": [
+      "assets/index-a548c207.css"
+    ],
+    "file": "assets/index-886bdb0b.js",
+    "imports": [
+      "_vendor-0f593a83.js"
+    ],
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/images/logo.svg": {
+    "file": "assets/logo-ee42717c.svg",
+    "src": "src/images/logo.svg"
+  },
+  "src/images/thumbnail-logo.png": {
+    "file": "assets/thumbnail-logo-45c66a80.png",
+    "src": "src/images/thumbnail-logo.png"
+  }
+}

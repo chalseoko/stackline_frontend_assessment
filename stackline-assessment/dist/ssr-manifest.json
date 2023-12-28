@@ -1,0 +1,257 @@
+{
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/highcharts-react-official/dist/highcharts-react.min.js?commonjs-module": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/highcharts/highstock.js?commonjs-module": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.production.min.js?commonjs-exports": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/hoist-non-react-statics/node_modules/react-is/index.js?commonjs-module": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react-dom/cjs/react-dom.production.min.js?commonjs-exports": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react-dom/cjs/react-dom.production.min.js?commonjs-proxy": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react-dom/client.js?commonjs-exports": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react-dom/index.js?commonjs-module": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react-redux/node_modules/react-is/cjs/react-is.production.min.js?commonjs-exports": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react/cjs/react-jsx-runtime.production.min.js?commonjs-exports": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react/cjs/react.production.min.js?commonjs-exports": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react/cjs/react.production.min.js?commonjs-proxy": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react/index.js?commonjs-module": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react/index.js?commonjs-proxy": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/react/jsx-runtime.js?commonjs-module": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/scheduler/cjs/scheduler.production.min.js?commonjs-exports": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/scheduler/cjs/scheduler.production.min.js?commonjs-proxy": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/scheduler/index.js?commonjs-module": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/scheduler/index.js?commonjs-proxy": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.production.min.js?commonjs-exports": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.production.min.js?commonjs-exports": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/use-sync-external-store/shim/index.js?commonjs-module": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000/workspaces/stackline_frontend_assessment/stackline-assessment/node_modules/use-sync-external-store/shim/with-selector.js?commonjs-module": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "\u0000commonjsHelpers.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "\u0000vite/modulepreload-polyfill": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "index.html": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/@babel/runtime/helpers/esm/defineProperty.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/@babel/runtime/helpers/esm/objectSpread2.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/@babel/runtime/helpers/esm/toPrimitive.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/@babel/runtime/helpers/esm/toPropertyKey.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/@babel/runtime/helpers/esm/typeof.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/@remix-run/router/dist/router.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/highcharts-react-official/dist/highcharts-react.min.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/highcharts/highstock.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.production.min.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/hoist-non-react-statics/node_modules/react-is/index.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/immer/dist/immer.esm.mjs": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-dom/cjs/react-dom.production.min.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/react-dom/client.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-dom/index.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/react-dom/index.js?commonjs-entry": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/react-redux/es/components/Context.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/components/Provider.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/hooks/useDispatch.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/hooks/useReduxContext.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/hooks/useSelector.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/hooks/useStore.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/index.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/utils/Subscription.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/utils/batch.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/es/utils/useSyncExternalStore.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-redux/node_modules/react-is/cjs/react-is.production.min.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react-router-dom/dist/index.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/react-router/dist/index.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/react/cjs/react-jsx-runtime.production.min.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/react/cjs/react.production.min.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/react/index.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/react/index.js?commonjs-entry": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/react/jsx-runtime.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/redux-thunk/es/index.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/redux/es/redux.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/scheduler/cjs/scheduler.production.min.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/scheduler/index.js": [
+    "/assets/vendor-0f593a83.js"
+  ],
+  "node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.production.min.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.production.min.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/use-sync-external-store/shim/index.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "node_modules/use-sync-external-store/shim/with-selector.js": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/App.tsx": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/app/hooks.ts": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/app/store.ts": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/components/banner.tsx": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/components/product.tsx": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/components/sales-trend.tsx": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/components/summary.tsx": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/components/tag.tsx": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/css/App.css": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/css/index.css": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/data/constants.ts": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/features/fetchProduct/fetchProduct.ts": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/features/fetchProduct/productSlice.ts": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/images/logo.svg": [
+    "/assets/logo-ee42717c.svg"
+  ],
+  "src/main.tsx": [
+    "/assets/logo-ee42717c.svg"
+  ]
+}

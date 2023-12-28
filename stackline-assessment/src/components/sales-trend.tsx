@@ -38,6 +38,9 @@ function getTrendOptions(sales: any): {} {
         fontFamily: ["Trebuchet MS", "sans-serif"],
       },
     },
+    accessibility: {
+      enabled: false,
+    },
     credits: {
       enabled: false,
     },
