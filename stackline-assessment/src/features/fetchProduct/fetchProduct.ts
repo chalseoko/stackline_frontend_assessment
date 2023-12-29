@@ -3,7 +3,6 @@ import {
   getFetchSuccess,
   getFetchError,
 } from "./productSlice"
-const jsonFilePath = "./../src/data/stackline_product_data.json"
 
 // This is the implementation of the JSON API
 export function fetchData() {
@@ -11,17 +10,7 @@ export function fetchData() {
     dispatch(fetchProductData())
 
     try {
-      const response = await fetch(jsonFilePath, {
-        headers: {
-          Method: "GET",
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "X-Content-Type-Options": "nosniff",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "POST, GET , DELETE , PUT , OPTIONS",
-          "Access-Control-Allow-Headers": "Content-Type",
-        },
-      })
+      const response = await fetch("/stackline_product_data.json")
       const data = await response.json()
       dispatch(getFetchSuccess(data[0]))
     } catch (error) {

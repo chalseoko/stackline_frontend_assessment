@@ -239,10 +239,10 @@
   "src/css/index.css": [
     "/assets/logo-ee42717c.svg"
   ],
-  "src/data/constants.ts": [
+  "src/features/fetchProduct/fetchProduct.ts": [
     "/assets/logo-ee42717c.svg"
   ],
-  "src/features/fetchProduct/fetchProduct.ts": [
+  "src/features/fetchProduct/productConstants.ts": [
     "/assets/logo-ee42717c.svg"
   ],
   "src/features/fetchProduct/productSlice.ts": [

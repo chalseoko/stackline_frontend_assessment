@@ -1,6 +1,6 @@
 import Highcharts from "highcharts/highstock"
 import HighchartsReact from "highcharts-react-official"
-import { xTickLabels } from "../data/constants"
+import { xTickLabels } from "../features/fetchProduct/productConstants"
 
 function SalesTrend(props: any) {
   const sales = getMonthlySales(props.sales)

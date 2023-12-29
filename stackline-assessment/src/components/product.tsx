@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import SalesTrend from "./sales-trend"
 import Summary from "./summary"
-import { Item } from "../data/constants"
+import { Item } from "../features/fetchProduct/productConstants"
 
 function Product(props: any) {
   const summary = createProductSummary(props.data)

@@ -3,7 +3,7 @@
     "file": "assets/vendor-0f593a83.js"
   },
   "index.css": {
-    "file": "assets/index-a548c207.css",
+    "file": "assets/index-a3d3962d.css",
     "src": "index.css"
   },
   "index.html": {
@@ -11,9 +11,9 @@
       "assets/logo-ee42717c.svg"
     ],
     "css": [
-      "assets/index-a548c207.css"
+      "assets/index-a3d3962d.css"
     ],
-    "file": "assets/index-886bdb0b.js",
+    "file": "assets/index-0a206af9.js",
     "imports": [
       "_vendor-0f593a83.js"
     ],

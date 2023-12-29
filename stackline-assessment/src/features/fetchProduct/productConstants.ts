@@ -1,3 +1,5 @@
+export const productPath: string = "/stackline_product_data.json"
+
 export const xTickLabels: string[] = [
   "JAN",
   "FEB",

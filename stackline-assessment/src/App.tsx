@@ -14,6 +14,8 @@ function App() {
     dispatch(fetchData())
   }, [])
 
+  console.log(error, data)
+
   return (
     <div className="stackline-app">
       <Banner />
