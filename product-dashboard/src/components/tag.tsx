@@ -6,7 +6,7 @@ function Tags(props: any) {
       <hr />
       <div className="tag-items">
         {props.text &&
-          props.text.map((item, index) => (
+          props.text.map((item: string, index: number) => (
             <span key={index} className="tag">
               {item}
             </span>

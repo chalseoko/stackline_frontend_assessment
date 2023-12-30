@@ -1,31 +1,31 @@
 import { Fragment } from "react"
 import SalesTrend from "./sales-trend"
 import Summary from "./summary"
-import { Item } from "../data/constants"
+import { Product } from "../features/product/productSlice"
 
-function Product(props: any) {
-  const summary = createProductSummary(props.data)
-  const sales = props.data["sales"]
+function ProductContainer(props: any) {
+  const product = createProduct(props.data)
 
   return (
     <Fragment>
       <div className="product-column">
-        <Summary item={summary} />
+        <Summary item={product} />
       </div>
       <div className="sales-column">
-        <SalesTrend sales={sales} />
+        <SalesTrend sales={product.sales} />
       </div>
     </Fragment>
   )
 }
 
-function createProductSummary(productData: any): Item {
+function createProduct(productData: any): Product {
   return {
     title: productData["title"],
-    img: productData["image"],
+    image: productData["image"],
     subtitle: productData["subtitle"],
     tags: productData["tags"],
+    sales: productData["sales"]
   }
 }
 
-export default Product
+export default ProductContainer

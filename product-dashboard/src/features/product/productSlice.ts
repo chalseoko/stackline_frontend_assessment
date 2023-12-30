@@ -1,14 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+export interface Product {
+  title: string
+  image: string
+  subtitle: string
+  tags: string[]
+  sales: WeeklySales[]
+}
+
+export interface WeeklySales {
+  weekEnding: string;
+  retailSales: number;
+  wholesaleSales: number;
+  unitsSold: number;
+  retailerMargin: number;
+}
+
 interface ProductState {
-  data: any
-  error: any
+  data: any[]
+  error: string | undefined
   loading: boolean
 }
 
 const initialState = {
   data: [],
-  error: null,
+  error: undefined,
   loading: false,
 } as ProductState
 
@@ -19,13 +35,14 @@ const productSlice = createSlice({
   reducers: {
     fetchProductData: (state) => {
       state.loading = true
-      state.error = null
+      state.error = undefined
     },
     getFetchSuccess: (state, action) => {
       state.loading = false
       state.data = action.payload
     },
     getFetchError: (state, action) => {
+      state.data = []
       state.loading = false
       state.error = action.payload
     },
