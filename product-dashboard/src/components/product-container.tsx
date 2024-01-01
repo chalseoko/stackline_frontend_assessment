@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import SalesTrend from "./sales-trend"
 import Summary from "./summary"
-import { Product } from "../features/product/productSlice"
+import { Product } from "../features/getProduct/productSlice"
 
 function ProductContainer(props: any) {
   const product = createProduct(props.data)

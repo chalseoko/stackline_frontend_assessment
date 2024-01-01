@@ -12,13 +12,15 @@ Resources to get started (attached via email):
 3. SVG of the Stackline logo
 
 We are looking for:
-
-1. A solution that resembles the provided mockup closely and implements AT LEAST ONE of either
-   the graph or table as seen in the mockup
+1. A solution that resembles the provided mockup closely and implements AT LEAST ONE of either the graph or table as seen in the mockup
 2. A working solution that takes the provided JSON file as output from a mock API call
 3. A solution that implements React and Redux best practices and patterns
 4. Clean, easy to follow code
-   Nice to haves:  Typescript  Functional components  Additional functionality in the graph or table, e.g. sorting, overlays
-   Assets to be returned via email within the provided time frame:
-5. A public git repository to view the final code
-6. A public URL to view the web page --- can be hosted on GitHub Pages, AWS, Vercel, etc.
+5. Nice to haves:
+   - Typescript
+   - Functional components
+   - Additional functionality in the graph or table, e.g. sorting, overlays
+6. Assets to be returned via email within the provided time frame:
+   - A public git repository to view the final code
+   - A public URL to view the web page --- can be hosted on GitHub Pages, AWS, Vercel, etc.
+

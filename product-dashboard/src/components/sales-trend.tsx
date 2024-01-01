@@ -1,6 +1,6 @@
 import * as Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import { WeeklySales } from "../features/product/productSlice";
+import { WeeklySales } from "../features/getProduct/product";
 
 function SalesTrend(props: any) {
   const sales = getMonthlySales(props.sales);
@@ -11,12 +11,12 @@ function SalesTrend(props: any) {
   );
 }
 
-function getMonthlySales(sales: []) {
-  let retailSales = Array.apply(null, Array(12)).map(
+function getMonthlySales(sales: any[]) {
+  const retailSales = Array.apply(null, Array(12)).map(
     Number.prototype.valueOf,
     0
   );
-  let wholesaleSales = Array.apply(null, Array(12)).map(
+  const wholesaleSales = Array.apply(null, Array(12)).map(
     Number.prototype.valueOf,
     0
   );
@@ -30,7 +30,7 @@ function getMonthlySales(sales: []) {
   return { retail: retailSales, wholesale: wholesaleSales };
 }
 
-function getTrendOptions(sales: any): Highcharts.Options {
+function getTrendOptions(data: any): Highcharts.Options {
   return {
     chart: {
       type: "spline",
@@ -55,13 +55,13 @@ function getTrendOptions(sales: any): Highcharts.Options {
       {
         name: "Wholesale Sales",
         type: "spline",
-        data: sales.wholesale,
+        data: data.wholesale,
         color: "#9da7c0",
       },
       {
         name: "Retail Sales",
         type: "spline",
-        data: sales.retail,
+        data: data.retail,
         color: "#45a7f6",
       },
     ],
@@ -86,6 +86,7 @@ function getTrendOptions(sales: any): Highcharts.Options {
             opacity: 0.5,
           },
         },
+        lineColor: 'transparent',
       },
     ],
     yAxis: [
@@ -93,6 +94,10 @@ function getTrendOptions(sales: any): Highcharts.Options {
         labels: {
           enabled: false,
         },
+        title: {
+          text: null
+        },
+        gridLineColor: '#ffffff'
       },
     ],
     tooltip: {
@@ -117,4 +122,4 @@ function setHighChartsOptions() {
   });
 }
 
-export default SalesTrend;
+export default SalesTrend

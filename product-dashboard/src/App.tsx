@@ -1,45 +1,31 @@
-import "./App.css";
-// import Product from "./components/product"
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
-import Banner from "./components/banner";
 import ProductContainer from "./components/product-container";
-import { fetchProductData, getFetchError, getFetchSuccess } from "./features/product/productSlice";
+import { getProduct } from "./features/getProduct/productSlice";
+import Banner from "./components/banner";
+import "./App.css";
 
 function App() {
   const dispatch = useAppDispatch();
-  const data = useAppSelector((state) => state.data);
-  const error = useAppSelector((state) => state.error);
-  const loading = useAppSelector((state) => state.loading);
+  const { data, loading } = useAppSelector((state) => state.product);
 
   useEffect(() => {
-    fetchData()
-  }, [dispatch]);
+    dispatch(getProduct());
+  }, []);
 
-  console.log(data, error, loading);
+  if (loading)
+    return (<p>Dashboard loading...</p>)
 
   return (
     <div className="product-dashboard">
       <Banner />
       <div className="product-container">
-      { !loading && data && data.length != 0 && <ProductContainer data={data} />}
+        {!loading && data && data.length != 0 && (
+          <ProductContainer data={data} />
+        )}
       </div>
     </div>
   );
-}
-
-function fetchData() {
-  return async (dispatch: any) => {
-    dispatch(fetchProductData());
-    try {
-      const response = await fetch("./assets/stackline_product_data.json");
-      const data = await response.json();
-      console.log(data)
-      dispatch(getFetchSuccess(data[0]));
-    } catch (error) {
-      dispatch(getFetchError((error as Error).message));
-    }
-  };
 }
 
 export default App;

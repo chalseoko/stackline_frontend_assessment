@@ -82,7 +82,6 @@ hr {
   opacity: calc(25%);
 }
 
-
 @media (max-width: 600px){
   .product-container{
     flex-direction: column;
@@ -91,4 +90,19 @@ hr {
   .product-column, .sales-column {
     width: 100%;
   }
+
+  .title-text p:first-of-type {
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  .title-text p:last-of-type {
+    font-size: small;
+    opacity: calc(50%);
+  }
+
+  .tag {
+    font-size: x-small;
+  }
 }
+
