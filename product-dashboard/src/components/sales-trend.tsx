@@ -1,13 +1,21 @@
 import * as Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import { WeeklySales } from "../features/getProduct/product";
+import { WeeklySales } from "../features/getProduct/productSlice";
+import { Fragment } from "react";
+import SalesTable from "./sales-table";
 
 function SalesTrend(props: any) {
-  const sales = getMonthlySales(props.sales);
+  const monthlySales = getMonthlySales(props.sales);
   setHighChartsOptions();
 
   return (
-    <HighchartsReact highcharts={Highcharts} options={getTrendOptions(sales)} />
+    <Fragment>
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={getTrendOptions(monthlySales)}
+      />
+      <SalesTable weeklySales={props.sales}/>
+    </Fragment>
   );
 }
 
@@ -67,6 +75,9 @@ function getTrendOptions(data: any): Highcharts.Options {
     ],
     xAxis: [
       {
+        accessibility: {
+          description: "Year",
+        },
         categories: [
           "JAN",
           "FEB",
@@ -86,7 +97,7 @@ function getTrendOptions(data: any): Highcharts.Options {
             opacity: 0.5,
           },
         },
-        lineColor: 'transparent',
+        lineColor: "transparent",
       },
     ],
     yAxis: [
@@ -95,9 +106,9 @@ function getTrendOptions(data: any): Highcharts.Options {
           enabled: false,
         },
         title: {
-          text: null
+          text: null,
         },
-        gridLineColor: '#ffffff'
+        gridLineColor: "#ffffff",
       },
     ],
     tooltip: {
@@ -122,4 +133,4 @@ function setHighChartsOptions() {
   });
 }
 
-export default SalesTrend
+export default SalesTrend;
