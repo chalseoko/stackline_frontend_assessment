@@ -1,4 +1,4 @@
-import logo from "./../assets/logo.svg"
+import logo from "./../assets/logo.svg";
 
 function Banner() {
   return (
@@ -7,7 +7,7 @@ function Banner() {
         <img src={logo} className="logo" alt="Stackline company logo" />
       </header>
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;

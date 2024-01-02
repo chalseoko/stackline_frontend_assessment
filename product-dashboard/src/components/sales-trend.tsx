@@ -14,7 +14,7 @@ function SalesTrend(props: any) {
         highcharts={Highcharts}
         options={getTrendOptions(monthlySales)}
       />
-      <SalesTable weeklySales={props.sales}/>
+      <SalesTable weeklySales={props.sales} />
     </Fragment>
   );
 }

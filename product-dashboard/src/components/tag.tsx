@@ -16,4 +16,4 @@ function Tags(props: any) {
   );
 }
 
-export default Tags
+export default Tags;

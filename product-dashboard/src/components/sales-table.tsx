@@ -13,13 +13,19 @@ function SalesTable(props: any) {
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
+            <tr className="table-row" {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                   {column.render("Header")}
-                  <span>
-                    {column.isSorted ? (column.isSortedDesc ? "🔽" : "🔼") : ""}
-                  </span>
+                  {column.isSorted ? (
+                    column.isSortedDesc ? (
+                      <span></span>
+                    ) : (
+                      <span></span>
+                    )
+                  ) : (
+                    <span></span>
+                  )}
                 </th>
               ))}
             </tr>
@@ -69,3 +75,5 @@ export const COLUMNS = [
 ];
 
 export default SalesTable;
+
+// import { BsChevronDown } from "react-icons/bs";

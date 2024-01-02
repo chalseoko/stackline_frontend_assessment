@@ -13,8 +13,7 @@ function App() {
     dispatch(getProduct());
   }, []);
 
-  if (loading)
-    return (<p>Dashboard loading...</p>)
+  if (loading) return <p>Dashboard loading...</p>;
 
   return (
     <div className="product-dashboard">

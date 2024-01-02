@@ -1,5 +1,5 @@
-import { Fragment } from "react"
-import Tags from "./tag"
+import { Fragment } from "react";
+import Tags from "./tag";
 
 function Summary(props: any) {
   return (
@@ -19,7 +19,7 @@ function Summary(props: any) {
         <Tags text={props.item.tags} />
       </div>
     </Fragment>
-  )
+  );
 }
 
-export default Summary
+export default Summary;

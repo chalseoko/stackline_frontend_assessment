@@ -41,19 +41,19 @@ const productSlice = createSlice({
   reducers: {},
   extraReducers(builder) {
     builder
-    .addCase(getProduct.pending, (state) => {
-      state.loading = true;
-    })
-    .addCase(getProduct.fulfilled, (state, action) => {
-      state.loading = false;
-      state.error = ""
-      state.data = action.payload[0]
-    })
-    .addCase(getProduct.rejected, (state, action) => {
-      state.loading = false;
-      state.error = action.error.message
-    })
+      .addCase(getProduct.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getProduct.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = "";
+        state.data = action.payload[0];
+      })
+      .addCase(getProduct.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
   },
 });
 
-export default productSlice.reducer
+export default productSlice.reducer;

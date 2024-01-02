@@ -54,6 +54,7 @@
   border: rgb(6, 40, 73, 0.2) 2px solid;
   padding: 5px 15px;
   border-radius: 2px;
+  margin-bottom: 2px;
   margin-left: 10px;
   font-size: small;
 }
@@ -82,12 +83,13 @@ hr {
   opacity: calc(25%);
 }
 
-@media (max-width: 600px){
-  .product-container{
+@media (max-width: 600px) {
+  .product-container {
     flex-direction: column;
   }
 
-  .product-column, .sales-column {
+  .product-column,
+  .sales-column {
     width: 100%;
   }
 
@@ -105,4 +107,3 @@ hr {
     font-size: x-small;
   }
 }
-
