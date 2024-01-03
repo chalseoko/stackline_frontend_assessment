@@ -7,12 +7,10 @@ View the project hosted online with [Vercel](https://vercel.com/): [Stackline Da
 ## Run Project
 1. Clone the repository to your local machine or via Github Codespaces.
 2. Navigate to the project directory:
-   ```cd product-dashboard
-   ```
+   `cd product-dashboard`
 
 3. Install all dependencies with:
-   ```npm install
-   ```
+   `npm install`
 
 4. Run project with:
    `npm run start`
