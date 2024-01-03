@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
-import ProductContainer from "./components/product-container";
 import { getProduct } from "./features/getProduct/productSlice";
+import ProductContainer from "./components/product-container";
 import Banner from "./components/banner";
 import "./App.css";
+import Spinner from "./components/spinner";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -13,7 +14,7 @@ function App() {
     dispatch(getProduct());
   }, []);
 
-  if (loading) return <p>Dashboard loading...</p>;
+  if (loading) return <Spinner loading={loading} />;
 
   return (
     <div className="product-dashboard">
