@@ -5,7 +5,8 @@ import SalesTable from "./sales-table";
 import { Fragment } from "react";
 
 function SalesTrend(props: any) {
-  const monthlySales = getMonthlySales(props.sales);
+  const sales = props.sales
+  const monthlySales = getMonthlySales(sales);
   setHighChartsOptions();
 
   return (
@@ -16,7 +17,7 @@ function SalesTrend(props: any) {
           options={getTrendOptions(monthlySales)}
         />
       </div>
-      <SalesTable weeklySales={props.sales} />
+      {<SalesTable weeklySales={sales} />}
     </Fragment>
   );
 }

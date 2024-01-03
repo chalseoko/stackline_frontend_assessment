@@ -15,7 +15,6 @@ code {
     monospace;
 }
 
-
 /* Table layout styling */
 table {
   border-collapse: collapse;
@@ -37,3 +36,4 @@ tbody {
   color: black;
   opacity: 0.5;
 }
+

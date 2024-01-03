@@ -1,21 +1,39 @@
-import { useMemo } from "react";
-import { useSortBy, useTable } from "react-table";
+import { useEffect, useMemo } from "react";
+import { usePagination, useSortBy, useTable } from "react-table";
 
 function SalesTable(props: any) {
-  const data = props.weeklySales
+  const data = props.weeklySales;
   const columns = useMemo(() => COLUMNS, []);
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    prepareRow,
+    page,
+    canPreviousPage,
+    canNextPage,
+    pageOptions,
+    pageCount,
+    gotoPage,
+    nextPage,
+    previousPage,
+    setPageSize,
+    state: { pageIndex, pageSize },
+  } = useTable(
+    {
+      columns: columns,
+      data: data,
+      sortDescFirst: false,
+      enableSortingRemoval: false,
+      disableSortRemove: true,
+      autoResetPageIndex: true,
+      initialState: { pageIndex: 0, pageSize: 10 },
+    },
+    useSortBy,
+    usePagination
+  );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
-      {
-        columns: columns,
-        data: data,
-        sortDescFirst: false,
-        enableSortingRemoval: false,
-        disableSortRemove: true,
-      },
-      useSortBy
-    );
+  useEffect(() => {}, []);
 
   return (
     <div className="sales-column-table">
@@ -42,7 +60,7 @@ function SalesTable(props: any) {
         </thead>
 
         <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
+          {page.map((row) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()}>
@@ -56,22 +74,40 @@ function SalesTable(props: any) {
           })}
         </tbody>
       </table>
+
+      <ul className="pagination">
+        <li onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+          <a className="nav-icon">{previousIcon(true)}</a>
+        </li>
+        <li onClick={() => previousPage()} disabled={!canPreviousPage}>
+          <a className="nav-icon">{previousIcon()}</a>
+        </li>
+        <li>
+          <p>
+            Page{": "}
+            <strong>
+              {pageIndex + 1} of {pageOptions.length}
+            </strong>
+          </p>
+        </li>
+        <li onClick={() => nextPage()} disabled={!canNextPage}>
+          <a className="nav-icon">{nextIcon()}</a>
+        </li>
+        <li
+          onClick={() => gotoPage(pageOptions.length - 1)}
+          disabled={!canPreviousPage}
+        >
+          <a className="nav-icon">{nextIcon(true)}</a>
+        </li>
+      </ul>
     </div>
   );
 }
 
-const formatMoney = (value) => {
-  if (value) {
-    return `$${value.toFixed(2)}`;
-  } else {
-    return "-";
-  }
-};
-
 const currency = new Intl.NumberFormat("en-us", {
   style: "currency",
   currency: "USD",
-  minimumFractionDigits: 0
+  minimumFractionDigits: 0,
 });
 
 export const COLUMNS = [
@@ -100,11 +136,79 @@ export const COLUMNS = [
   },
 ];
 
+function nextIcon(isLastPage: boolean = false) {
+  if (isLastPage)
+    return (
+      <svg
+        className="nav-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 21 21"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m7.5 14.5l4-4l-4-4m4 8l4-4l-4-4"
+        />
+      </svg>
+    );
+  return (
+    <svg
+      className="nav-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 21 21"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m9.5 14.5l4-4l-4-4"
+      />
+    </svg>
+  );
+}
+
+function previousIcon(isFirstPage: boolean = false) {
+  if (isFirstPage)
+    return (
+      <svg
+        className="nav-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 21 21"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m13.5 14.5l-4-4l4-4m-4 8l-4-4l4-4"
+        />
+      </svg>
+    );
+  return (
+    <svg
+      className="nav-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 21 21"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m11.5 14.5l-4-4l4-4"
+      />
+    </svg>
+  );
+}
+
 function ascIcon(sortActive: boolean = false) {
   const opacity = sortActive ? undefined : { opacity: 0.5 };
   return (
     <svg
-      className="table-sort-icon"
+      className="sort-icon"
       style={opacity}
       xmlns="http://www.w3.org/2000/svg"
       width="1.5em"
@@ -114,8 +218,8 @@ function ascIcon(sortActive: boolean = false) {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="m6.5 12.5l4-4l4 4"
       />
     </svg>
@@ -126,7 +230,7 @@ function descIcon(sortActive: boolean = false) {
   const opacity = sortActive ? undefined : { opacity: 0.5 };
   return (
     <svg
-      className="table-sort-icon"
+      className="sort-icon"
       xmlns="http://www.w3.org/2000/svg"
       width="1.5em"
       height="1.5em"
@@ -136,8 +240,8 @@ function descIcon(sortActive: boolean = false) {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="m14.5 8.5l-4 4l-4-4"
       ></path>
     </svg>

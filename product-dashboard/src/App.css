@@ -91,6 +91,28 @@ div hr:last-of-type {
   margin-top: 5vh;
 }
 
+.pagination {
+  display: inline-flex;
+  list-style-type: none;
+  font-size: small;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav-icon {
+  margin: 0px 10px;
+}
+
+li p {
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 /* Responsive layout styling */
 @media (max-width: 600px) {
   .product-container {
