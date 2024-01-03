@@ -14,3 +14,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Table layout styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  font-size: small;
+  text-align: left;
+  padding: 15px;
+}
+
+tr {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+tbody {
+  color: black;
+  opacity: 0.5;
+}

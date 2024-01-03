@@ -1,8 +1,6 @@
-import { Fragment } from "react";
-
 function Tags(props: any) {
   return (
-    <Fragment>
+    <>
       <hr />
       <div className="tag-items">
         {props.text.map((item: string, index: number) => (
@@ -12,8 +10,8 @@ function Tags(props: any) {
         ))}
       </div>
       <hr />
-    </Fragment>
+    </>
   );
 }
 
-export default Tags
+export default Tags;

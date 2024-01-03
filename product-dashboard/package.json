@@ -8,28 +8,30 @@
     "start": "vite",
     "build": "vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "tsc vite preview"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
+    "@tanstack/react-table": "^8.11.2",
     "highcharts": "^11.2.0",
-    "highcharts-react": "^0.0.3",
     "highcharts-react-official": "^3.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^6.1.6",
     "react-redux": "^9.0.4",
-    "vercel": "^33.0.1"
+    "react-table": "^7.8.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
+    "@types/react-table": "^7.7.18",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }
 }

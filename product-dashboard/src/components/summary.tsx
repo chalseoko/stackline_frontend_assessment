@@ -1,9 +1,8 @@
-import { Fragment } from "react"
-import Tags from "./tag"
+import Tags from "./tag";
 
 function Summary(props: any) {
   return (
-    <Fragment>
+    <>
       <div className="product">
         <img
           src={props.item.image}
@@ -18,8 +17,8 @@ function Summary(props: any) {
       <div className="product-tags">
         <Tags text={props.item.tags} />
       </div>
-    </Fragment>
-  )
+    </>
+  );
 }
 
-export default Summary
+export default Summary;

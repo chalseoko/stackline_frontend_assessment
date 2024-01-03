@@ -1,10 +1,4 @@
-.banner {
-  background-color: #062849;
-  position: relative;
-  height: 5vh;
-  margin-bottom: 5vh;
-}
-
+/* Banner styling */
 .logo {
   position: absolute;
   height: 50%;
@@ -12,31 +6,36 @@
   padding: 0vh 5vh;
 }
 
+.banner {
+  background-color: #062849;
+  position: relative;
+  height: 5vh;
+  margin-bottom: 5vh;
+}
+
+/* Product column styling  */
 .product-dashboard {
   display: flexbox;
 }
 
-.product-image {
-  width: -moz-available;
-  width: -webkit-fill-available;
-  width: fill-available;
+.product-column {
+  background-color: #ffffff;
+  height: 100%;
+  width: 30%;
+  padding: 5px;
 }
 
 .product-container {
   display: flex;
   gap: 5vh;
   text-align: center;
-  padding: 0vh 5vh;
+  margin: 0vh 5vh;
 }
 
-.product-container div {
-  background-color: #ffffff;
-}
-
-.product-column {
-  height: 100%;
-  width: 30%;
-  padding: 5px;
+.product-image {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
 }
 
 .product {
@@ -54,18 +53,17 @@
   border: rgb(6, 40, 73, 0.2) 2px solid;
   padding: 5px 15px;
   border-radius: 2px;
+  margin-bottom: 2px;
   margin-left: 10px;
   font-size: small;
 }
 
-div hr:last-of-type {
-  margin-bottom: 200px;
+hr {
+  opacity: calc(25%);
 }
 
-.sales-column {
-  height: 75%;
-  width: 65%;
-  padding: 10px;
+div hr:last-of-type {
+  margin-bottom: 200px;
 }
 
 .title-text p:first-of-type {
@@ -78,16 +76,52 @@ div hr:last-of-type {
   opacity: calc(50%);
 }
 
-hr {
-  opacity: calc(25%);
+/* Sales column styling  */
+.sales-column {
+  width: 65%;
+  padding: 10px;
 }
 
-@media (max-width: 600px){
-  .product-container{
+.sales-column-trend,
+.sales-column-table {
+  background-color: #ffffff;
+}
+
+.sales-column-table {
+  margin-top: 5vh;
+  overflow: auto;
+}
+
+.pagination {
+  display: inline-flex;
+  list-style-type: none;
+  font-size: small;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav-icon {
+  margin: 0px 10px;
+}
+
+li p {
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Responsive layout styling */
+@media (max-width: 600px) {
+  .product-container {
     flex-direction: column;
   }
 
-  .product-column, .sales-column {
+  .product-column,
+  .sales-column {
     width: 100%;
   }
 
@@ -105,4 +139,3 @@ hr {
     font-size: x-small;
   }
 }
-
