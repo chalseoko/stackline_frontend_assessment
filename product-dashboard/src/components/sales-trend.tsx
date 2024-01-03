@@ -1,8 +1,8 @@
 import * as Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { WeeklySales } from "../features/getProduct/productSlice";
-import { Fragment } from "react";
 import SalesTable from "./sales-table";
+import { Fragment } from "react";
 
 function SalesTrend(props: any) {
   const monthlySales = getMonthlySales(props.sales);
@@ -10,10 +10,12 @@ function SalesTrend(props: any) {
 
   return (
     <Fragment>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={getTrendOptions(monthlySales)}
-      />
+      <div className="sales-column-trend">
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={getTrendOptions(monthlySales)}
+        />
+      </div>
       <SalesTable weeklySales={props.sales} />
     </Fragment>
   );
@@ -97,7 +99,7 @@ function getTrendOptions(data: any): Highcharts.Options {
             opacity: 0.5,
           },
         },
-        lineColor: "transparent",
+        lineColor: "#d3d3d3",
       },
     ],
     yAxis: [

@@ -2,29 +2,38 @@ import { useMemo } from "react";
 import { useSortBy, useTable } from "react-table";
 
 function SalesTable(props: any) {
-  const data = props.weeklySales;
+  const data = props.weeklySales
   const columns = useMemo(() => COLUMNS, []);
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data }, useSortBy);
+    useTable(
+      {
+        columns: columns,
+        data: data,
+        sortDescFirst: false,
+        enableSortingRemoval: false,
+        disableSortRemove: true,
+      },
+      useSortBy
+    );
 
   return (
-    <div className="sales-table">
+    <div className="sales-column-table">
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
-            <tr className="table-row" {...headerGroup.getHeaderGroupProps()}>
+            <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                   {column.render("Header")}
                   {column.isSorted ? (
                     column.isSortedDesc ? (
-                      <span></span>
+                      <span>{ascIcon(column.isSorted)}</span>
                     ) : (
-                      <span></span>
+                      <span>{descIcon(column.isSorted)}</span>
                     )
                   ) : (
-                    <span></span>
+                    <span>{ascIcon(column.isSorted)}</span>
                   )}
                 </th>
               ))}
@@ -51,6 +60,20 @@ function SalesTable(props: any) {
   );
 }
 
+const formatMoney = (value) => {
+  if (value) {
+    return `$${value.toFixed(2)}`;
+  } else {
+    return "-";
+  }
+};
+
+const currency = new Intl.NumberFormat("en-us", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 0
+});
+
 export const COLUMNS = [
   {
     Header: "Week Ending",
@@ -59,10 +82,12 @@ export const COLUMNS = [
   {
     Header: "Retail Sales",
     accessor: "retailSales",
+    Cell: ({ value }) => currency.format(value),
   },
   {
     Header: "Wholesale Sales",
     accessor: "wholesaleSales",
+    Cell: ({ value }) => currency.format(value),
   },
   {
     Header: "Units Sold",
@@ -71,9 +96,52 @@ export const COLUMNS = [
   {
     Header: "Retailer Margin",
     accessor: "retailerMargin",
+    Cell: ({ value }) => currency.format(value),
   },
 ];
 
-export default SalesTable;
+function ascIcon(sortActive: boolean = false) {
+  const opacity = sortActive ? undefined : { opacity: 0.5 };
+  return (
+    <svg
+      className="table-sort-icon"
+      style={opacity}
+      xmlns="http://www.w3.org/2000/svg"
+      width="1.5em"
+      height="1.5em"
+      viewBox="0 0 21 21"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m6.5 12.5l4-4l4 4"
+      />
+    </svg>
+  );
+}
 
-// import { BsChevronDown } from "react-icons/bs";
+function descIcon(sortActive: boolean = false) {
+  const opacity = sortActive ? undefined : { opacity: 0.5 };
+  return (
+    <svg
+      className="table-sort-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="1.5em"
+      height="1.5em"
+      viewBox="0 0 21 21"
+      style={opacity}
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m14.5 8.5l-4 4l-4-4"
+      ></path>
+    </svg>
+  );
+}
+
+export default SalesTable;

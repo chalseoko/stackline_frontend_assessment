@@ -15,12 +15,25 @@ code {
     monospace;
 }
 
-td,
-th {
-  text-align: left;
-  padding: 10px;
+
+/* Table layout styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-td {
+td,
+th {
   font-size: small;
+  text-align: left;
+  padding: 15px;
+}
+
+tr {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+tbody {
+  color: black;
+  opacity: 0.5;
 }
