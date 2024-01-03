@@ -89,6 +89,7 @@ div hr:last-of-type {
 
 .sales-column-table {
   margin-top: 5vh;
+  overflow: auto;
 }
 
 .pagination {

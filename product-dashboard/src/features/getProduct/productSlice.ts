@@ -1,26 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
-export interface Product {
-  title: string;
-  image: string;
-  subtitle: string;
-  tags: string[];
-  sales: WeeklySales[];
-}
-
-export interface WeeklySales {
-  weekEnding: string;
-  retailSales: number;
-  wholesaleSales: number;
-  unitsSold: number;
-  retailerMargin: number;
-}
-
-interface ProductState {
-  data: any[];
-  error: string | undefined;
-  loading: boolean;
-}
+import { ProductState } from "../../utils/product";
 
 const initialState = {
   data: [],

@@ -1,5 +1,6 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { usePagination, useSortBy, useTable } from "react-table";
+import { COLUMNS } from "../utils/sales";
 
 function SalesTable(props: any) {
   const data = props.weeklySales;
@@ -32,8 +33,6 @@ function SalesTable(props: any) {
     useSortBy,
     usePagination
   );
-
-  useEffect(() => {}, []);
 
   return (
     <div className="sales-column-table">
@@ -104,43 +103,13 @@ function SalesTable(props: any) {
   );
 }
 
-const currency = new Intl.NumberFormat("en-us", {
-  style: "currency",
-  currency: "USD",
-  minimumFractionDigits: 0,
-});
-
-export const COLUMNS = [
-  {
-    Header: "Week Ending",
-    accessor: "weekEnding",
-  },
-  {
-    Header: "Retail Sales",
-    accessor: "retailSales",
-    Cell: ({ value }) => currency.format(value),
-  },
-  {
-    Header: "Wholesale Sales",
-    accessor: "wholesaleSales",
-    Cell: ({ value }) => currency.format(value),
-  },
-  {
-    Header: "Units Sold",
-    accessor: "unitsSold",
-  },
-  {
-    Header: "Retailer Margin",
-    accessor: "retailerMargin",
-    Cell: ({ value }) => currency.format(value),
-  },
-];
-
 function nextIcon(isLastPage: boolean = false) {
   if (isLastPage)
     return (
       <svg
         className="nav-icon"
+        width="1.5em"
+        height="1.5em"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 21 21"
       >
@@ -156,6 +125,8 @@ function nextIcon(isLastPage: boolean = false) {
   return (
     <svg
       className="nav-icon"
+      width="1.5em"
+      height="1.5em"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 21 21"
     >
@@ -175,6 +146,8 @@ function previousIcon(isFirstPage: boolean = false) {
     return (
       <svg
         className="nav-icon"
+        width="1.5em"
+        height="1.5em"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 21 21"
       >
@@ -190,6 +163,8 @@ function previousIcon(isFirstPage: boolean = false) {
   return (
     <svg
       className="nav-icon"
+      width="1.5em"
+      height="1.5em"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 21 21"
     >
