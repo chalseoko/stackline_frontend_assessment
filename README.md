@@ -7,33 +7,39 @@ View the project hosted online with [Vercel](https://vercel.com/): [Stackline Da
 ## Run Project
 1. Clone the repository to your local machine or via Github Codespaces.
 2. Navigate to the project directory:
-       ```cd product-dashboard
-       ```
+   ```cd product-dashboard
+   ```
+
 3. Install all dependencies with:
-       ```npm install
-       ```
+   ```npm install
+   ```
+
 4. Run project with:
-        ```npm run dev```
+   `npm run start`
+
 5. Open your browser and go to: [http://localhost:5173](http://localhost:5173)
 
 ## Folder Structure
 - **src**: Source code for the application
 - **dist**: Static assets for production build
+- **public**: Static assets for production build (unbundled)
 
 ## Scripts
 - `npm run dev` - start dev server and open browser
-- `npm run build && serve -s dist` - build for production
+- `npm run build` - build for production
 - `npm preview` - locally preview production build
 
 ## Technologies Used
-- [Vite](https://www.vite.com/)
-- [Vercel](https://vercel.com/)
-- [HighCharts](https://www.highcharts.com/)
 - React
 - Redux
 - TypeScript
 - HTML
 - CSS
+- [Vite](https://www.vite.com/)
+- [Vercel](https://vercel.com/)
+- [HighCharts](https://www.highcharts.com/)
+- [react-table](https://www.npmjs.com/package/react-table)
+- [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner)
 
 ## Thank you
 Thanks for taking the time to review my code in consideration for this position and I look forward to hearing your feedback!
